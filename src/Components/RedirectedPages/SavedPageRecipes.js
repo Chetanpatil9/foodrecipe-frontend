@@ -61,14 +61,14 @@ const SavedPageRecipes = ({ recipe }) => {
                         ))
                     }
                     {
-                        data && data.map((element, index) => (
-                            <div id='added-recipes-card'>
-                                <img src='' alt=''></img>
-                                <img src='' alt=''></img>
-                                <h3>{element.recipeTitle.toUpperCase()}</h3>
-                                {/* <p>By {email.substring(0, email.length - 10)}</p> */}
-                            </div>
-                        ))
+                        // data && data.map((element, index) => (
+                        //     <div id='added-recipes-card'>
+                        //         <img src='' alt=''></img>
+                        //         <img src='' alt=''></img>
+                        //         <h3>{element.recipeTitle.toUpperCase()}</h3>
+                        //         <p>By {email.substring(0, email.length - 10)}</p>
+                        //     </div>
+                        // ))
                     }
                 </div>
             </div >
