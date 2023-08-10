@@ -20,9 +20,7 @@ const SavedPageRecipes = ({ recipe }) => {
 
     useEffect(() => {
         axios.get('https://food-recipe-backend.onrender.com/recipes/getyourownrecipe', {
-            // headers: {
-            //     'Authorization': "Bearer " + token
-            // }
+          
         })
             .then((response) => setData(response.data))
             .catch((error) => console.log("Error", error))
@@ -43,14 +41,14 @@ const SavedPageRecipes = ({ recipe }) => {
                 </div>
                 <div id='saved-page-recipes-my-boards'>
                     <NavLink to='/saved/recipes'>RECIPES</NavLink>
-                    <NavLink to='/saved/myboards'>MY BOARDS</NavLink>
+                    {/* <NavLink to='/saved/myboards'>MY BOARDS</NavLink> */}
                 </div>
                 <div id='saved-page-recipes'>
                     <div id='discover-recipes-card'>
                         <BsFillPlusCircleFill id='saved-page-recipes-plus-icon' onClick={() => navigate('/')} />
                         <h3 onClick={() => navigate('/')}>DISCOVER <br /> RECIPES</h3>
-                        <p>..... or .....</p>
-                        <Link to='/addyourownrecipe'>Add Your Own Recipe</Link>
+                        {/* <p>..... or .....</p> */}
+                        {/* <Link to='/addyourownrecipe'>Add Your Own Recipe</Link> */}
                     </div>
                     {
                         RECIPE.map((element, index) => (
@@ -63,10 +61,10 @@ const SavedPageRecipes = ({ recipe }) => {
                     {
                         // data && data.map((element, index) => (
                         //     <div id='added-recipes-card'>
-                        //         <img src='' alt=''></img>
-                        //         <img src='' alt=''></img>
-                        //         <h3>{element.recipeTitle.toUpperCase()}</h3>
-                        //         <p>By {email.substring(0, email.length - 10)}</p>
+                        //         {/* <img src='' alt=''></img> */}
+                        //         <text src='' alt=''></text>
+                        //         <h4>{element.recipeTitle.toUpperCase()}</h4>
+                        //         {/* <p>By {email.substring(0, email.length - 10)}</p> */}
                         //     </div>
                         // ))
                     }

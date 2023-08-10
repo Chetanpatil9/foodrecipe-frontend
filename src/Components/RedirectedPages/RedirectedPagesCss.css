@@ -223,9 +223,9 @@
 
 #added-recipes-card{
     background-color: white;
-    text-align: left;
+    text-align: center;
     width: 13.5rem;
-    height: 20.75rem;
+    height: 15.75rem;
     cursor: pointer;
     margin-right: 2rem;
     margin-left: 2rem;
