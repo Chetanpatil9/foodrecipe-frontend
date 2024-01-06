@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./MainComponentsCss.css";
-import NavbarSearchIcon from "../Assets/Navbar/navbar-search-icon.png";
 import NavbarSavedIcon from "../Assets/Navbar/navbar-saved-icon.png";
 import NavbarProfileIcon from "../Assets/Navbar/navbar-profile-icon.png";
 import NavbarLoggedInIcon from '../Assets/Navbar/navbar-logged-in-icon.png'
@@ -67,16 +66,19 @@ const Navbar = () => {
 
     return (
         <>
+        
             <div id="navbar">
+            
                 <Link to="/" id="navbar-heading-link">
-                    <h1>Food<span id="navbar-heading-dot">.</span></h1>
+                    <h4>Restaurant Landing Page<span id="navbar-heading-dot">.</span></h4>
                 </Link>
+                
                 <button id='mobile-menu-icon' onClick={() => { setIsMobile(!isMobile) }}>
                     {isMobile ? <RxCross2 /> : <GiHamburgerMenu />}
                 </button>
                 <div id="navbar-recipes-categories">
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">RECIPES</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Landing</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/breakfast and brunch' className="navbar-recipes-categories-dropdown-links">Breakfast & Brunch Recipes</Link>
                             <Link to='/recipes/lunch' className="navbar-recipes-categories-dropdown-links">Lunch Recipes</Link>
@@ -89,7 +91,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">POPULAR</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Home</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/trending now' className="navbar-recipes-categories-dropdown-links">Trending Now</Link>
                             <Link to='/recipes/casserole' className="navbar-recipes-categories-dropdown-links">Casserole Recipes</Link>
@@ -102,7 +104,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">MEAT & SEAFOOD</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Gallery</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/chicken' className="navbar-recipes-categories-dropdown-links">Chicken Recipes</Link>
                             <Link to='/recipes/salmon' className="navbar-recipes-categories-dropdown-links">Salmon recipes</Link>
@@ -112,7 +114,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">HEALTHY & DIET</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Shop</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/keto' className="navbar-recipes-categories-dropdown-links">Keto recipes</Link>
                             <Link to='/recipes/healthy' className="navbar-recipes-categories-dropdown-links">Healthy Recipes</Link>
@@ -125,7 +127,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">HOLIDAYS</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Blog</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/dinner party' className="navbar-recipes-categories-dropdown-links">Dinner Party Recipes</Link>
                             <Link to='/recipes/game day' className="navbar-recipes-categories-dropdown-links">Game Day Recipes</Link>
@@ -138,7 +140,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">CUISINE</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">About</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/mexican' className="navbar-recipes-categories-dropdown-links">Mexican recipes</Link>
                             <Link to='/recipes/italian' className="navbar-recipes-categories-dropdown-links">Italian Recipes</Link>
@@ -151,7 +153,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="navbar-recipes-categories-dropdown">
-                        <ul className="navbar-recipes-categories-dropdown-button">SEASONAL</ul>
+                        <ul className="navbar-recipes-categories-dropdown-button">Team</ul>
                         <div className="navbar-recipes-categories-dropdown-content">
                             <Link to='/recipes/spring' className="navbar-recipes-categories-dropdown-links">Spring Recipes</Link>
                             <Link to='/recipes/summer' className="navbar-recipes-categories-dropdown-links">Summer Recipes</Link>
@@ -159,9 +161,22 @@ const Navbar = () => {
                             <Link to='/recipes/winter' className="navbar-recipes-categories-dropdown-links">Winter Recipes</Link>
                         </div>
                     </div>
+                    <div className="navbar-recipes-categories-dropdown">
+                        <ul className="navbar-recipes-categories-dropdown-button">Contact</ul>
+                        <div className="navbar-recipes-categories-dropdown-content">
+                            <Link to='/recipes/mexican' className="navbar-recipes-categories-dropdown-links">Mexican recipes</Link>
+                            <Link to='/recipes/italian' className="navbar-recipes-categories-dropdown-links">Italian Recipes</Link>
+                            <Link to='/recipes/indian' className="navbar-recipes-categories-dropdown-links">Indian Recipes</Link>
+                            <Link to='/recipes/thai' className="navbar-recipes-categories-dropdown-links">Thai Recipes</Link>
+                            <Link to='/recipes/korean' className="navbar-recipes-categories-dropdown-links">Korean recipes</Link>
+                            <Link to='/recipes/french' className="navbar-recipes-categories-dropdown-links">French rceipes</Link>
+                            <Link to='/recipes/latin american' className="navbar-recipes-categories-dropdown-links">Latin American Recipes</Link>
+                            <Link to='/recipes/chinese' className="navbar-recipes-categories-dropdown-links">Chinese Recipes</Link>
+                        </div>
+                    </div>
                 </div>
                 <div id="navbar-search-saved-profile-icons">
-                    <Link to='/search'><img src={NavbarSearchIcon} alt="search-icon"></img></Link>
+                    {/* <Link to='/search'><img src={NavbarSearchIcon} alt="search-icon"></img></Link> */}
                     <Link to='/saved/recipes'><img src={NavbarSavedIcon} alt="saved-icon"></img></Link>
                     {isLogged ?
                         <div className="navbar-logged-in-dropdown">
